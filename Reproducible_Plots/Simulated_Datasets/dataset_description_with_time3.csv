@@ -1,0 +1,119 @@
+,dataset_name,severity_description,severity_level,temp_03,temp_025,temp_02,temp_035,temp_indice,temperature_detected,second_buy
+1,Sorteria-100SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,21.72556703,21.72556703,21.74862758,21.76899208,2080,21.74862758,NA
+2,Sorteria-100SOC-cell2,"No effect, instant local Joule heating, no internal discharge – 1",1,22.369198,22.21756624,22.1732582,22.46598683,1864,22.1732582,NA
+3,Soteria-SCC-90SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,22.94755714,22.94755714,22.94755714,23.15114136,720,22.94755714,NA
+4,Soteria-SCC-80SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,22.947894,22.94558121,22.94558121,22.98018179,1672,22.94558121,NA
+5,Soteria-SCC-60SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,23.27196409,23.1711268,23.15312481,23.29561485,1640,23.15312481,NA
+6,Soteria-SCC-20SOC-5180mAh,"No effect, instant local Joule heating, no internal discharge – 1",1,22.92522152,22.89230929,22.8554916,22.96025861,1698,22.8554916,NA
+7,OE-LCO-6340mAh-0SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.803852,22.73014727,22.6385552,23.0517096,1414,22.6385552,5.2
+8,Soteria-SCC-5070-70SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,23.1369387,23.07100179,23.07100179,23.1576848,1620,23.07100179,NA
+9,Soteria-SCC-4160mAh-100SOC-8mm,"No effect, instant local Joule heating, no internal discharge – 1",1,23.12356594,23.12356594,23.1408149,23.26302089,1680,23.1408149,NA
+10,Soteria-SCC-4720mAh-40SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,23.1306104,23.12248722,23.11423158,23.42044534,1600,23.11423158,NA
+11,Soteria-SCC-4700mAh-100SOC-12mm,"No effect, instant local Joule heating, no internal discharge – 1",1,21.72556703,21.72556703,21.72556703,21.76899208,Inf,21.74862758,NA
+12,Soteria-SCC-5050mAhr-100SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.7695012,22.7695012,22.7695012,22.7695012,1680,22.7695012,NA
+13,Soteria-SCC-4870mah-0SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.14440636,22.14440636,22.0956194,22.15292909,1584,22.0956194,NA
+14,Soteria-SCC-4630mAh-10SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.39232071,22.37637098,22.34252455,22.52295636,1228,22.34252455,NA
+15,Soteria-SCC-5080mAh-20SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.8625201,22.83425545,22.83425545,22.87435515,1428,22.83425545,NA
+16,Soteria-SCC-5170mAh-60SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,22.9696276,22.78919,22.52948612,23.00776896,1140,22.52948612,NA
+17,OE-LFP10Ah-0SOC-cell9,"No effect, local heating, internal discharge – 2",2,19.65909,19.65909,19.65909,19.82409,588,19.65909,47.4
+18,OE-LFP10Ah-0SOC-cell10,"No effect, local heating, internal discharge – 2",2,20.60325,20.52182,20.52182,20.73986,580,20.52182,NA
+19,OE-LFP10Ah-40SOC-cell7,"No effect, local heating, internal discharge – 2",2,18.86333,18.80384,18.80384,18.84757,552,18.80384,34.9
+20,OE-LFP10Ah-70SOC-cell5,"No effect, local heating, internal discharge – 2",2,16.92486,16.903505,16.89136,17.005065,682,16.89136,23.5
+21,OE-LFP10Ah-70SOC-cell6,"No effect, local heating, internal discharge – 2",2,17.28041,17.25805,17.25228,17.28041,539,17.25228,NA
+22,OE-LFP10Ah-100SOC-cell2,"No effect, local heating, internal discharge – 2",2,19.35461,19.35461,19.31096,19.44183,754,19.31096,NA
+23,OE-LFP10Ah-80SOC-Cell15,"No effect, local heating, internal discharge – 2",2,17.64547,17.64547,17.55274,17.70767,648,17.55274,11
+24,OE-LFP-cell14-60SOC-10Ah,"No effect, local heating, internal discharge – 2",2,22.78376343,22.78376343,22.47792865,22.81494346,1980,22.47792865,28.6
+25,OE-LFP10Ah-60SOC,"No effect, local heating, internal discharge – 2",2,23.03896891,22.9164562,22.9164562,23.0764645,2262,22.9164562,15.8
+26,500mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,23.949,23.904,23.6895,23.972,1292,23.6895,NA
+27,500mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,23.7355,23.7355,23.6535,23.78,1410,23.6535,15.3
+28,500mAh1-60S0C,"No effect, local heating, internal discharge – 2",2,24.479,24.319,24.285,24.479,1341,24.285,8.5
+29,500mAh1-80S0C,"No effect, local heating, internal discharge – 2",2,23.49,23.4775,23.465,23.535,1155,23.465,16.4
+30,500mAh1-100S0C,"No effect, local heating, internal discharge – 2",2,25.647,25.154,24.65,25.647,1222,24.65,10.7
+31,500mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,24.703,24.3675,24.213,24.703,1230,24.213,12.6
+32,500mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,24.08,24.047,24.037,24.49,1190,24.037,9.4
+33,500mAh2-60S0C,"No effect, local heating, internal discharge – 2",2,23.99,23.99,23.943,23.99,1100,23.943,9.6
+34,500mAh2-80S0C,"No effect, local heating, internal discharge – 2",2,26.557,24.785,24.466,26.557,1015,24.466,10.5
+35,500mAh2-100S0C,"No effect, local heating, internal discharge – 2",2,25.284,25.284,25.071,25.749,1100,25.071,12.2
+36,500mAh3-20S0C,"No effect, local heating, internal discharge – 2",2,23.878,23.868,23.814,23.943,974,23.814,27
+37,500mAh3-40S0C,"No effect, local heating, internal discharge – 2",2,25.204,25.034,24.74,25.4175,1034,24.74,6.6
+38,500mAh3-60S0C,"No effect, local heating, internal discharge – 2",2,24.296,24.296,24.257,24.351,952,24.257,26.7
+39,500mAh3-80S0C,"No effect, local heating, internal discharge – 2",2,25.5,25.236,25.236,26.124,952,25.236,10.9
+40,500mAh3-100S0C,"No effect, local heating, internal discharge – 2",2,25.897,25.286,25.286,27.446,930,25.286,8.4
+41,2000mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,23.79,23.741,23.596,23.7985,1453,23.596,10.1
+42,2000mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,24.781,24.781,24.437,25.227,1496,24.437,13.6
+43,2000mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,23.896,23.843,23.8455,23.896,312,23.8455,148.4
+44,2000mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,24.51,24.405,24.324,24.7035,1586,24.324,21.9
+45,1500mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,24.291,24.196,24.171,24.459,1408,24.171,11.6
+46,1500mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,23.784,23.7675,23.761,23.801,44,23.761,150
+47,1500mAh1-60S0C,"No effect, local heating, internal discharge – 2",2,23.9535,23.817,23.817,24.031,1482,23.817,15.5
+48,1500mAh1-80S0C,"No effect, local heating, internal discharge – 2",2,25.1155,24.515,24.3225,25.1155,1346,24.3225,11.9
+49,1500mAh1-100S0C,"No effect, local heating, internal discharge – 2",2,24.692,24.692,23.987,25.119,1386,23.987,10.6
+50,1500mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,24.9235,24.7525,24.62,24.9235,1470,24.62,16.5
+51,1500mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,25.2065,24.9225,24.8,25.368,1272,24.8,12.7
+52,1500mAh2-60S0C,"No effect, local heating, internal discharge – 2",2,24.805,24.3515,24.3515,25.0715,1380,24.3515,11.5
+53,1500mAh2-80S0C,"No effect, local heating, internal discharge – 2",2,25.355,25.101,23.902,25.935,1391,23.902,10.8
+54,1500mAh2-100S0C,"No effect, local heating, internal discharge – 2",2,24.394,24.394,24.024,24.619,1520,24.024,20.2
+55,1500mAh3-20S0C,"No effect, local heating, internal discharge – 2",2,24.668,24.443,24.248,24.782,1472,24.248,13.5
+56,1500mAh3-40S0C,"No effect, local heating, internal discharge – 2",2,25.388,25.103,24.9815,25.683,1450,24.9815,11
+57,1500mAh3-60S0C,"No effect, local heating, internal discharge – 2",2,24.4695,24.2555,24.26,24.7815,990,24.26,59.4
+58,1500mAh3-80S0C,"No effect, local heating, internal discharge – 2",2,25.278,25.278,24.9165,25.278,1368,24.9165,11.7
+59,1500mAh3-100S0C,"No effect, local heating, internal discharge – 2",2,25.332,25.332,24.917,25.471,1364,24.917,16.2
+60,OE-LFP10Ah-20SOC,"No effect, local heating, internal discharge – 2",2,22.49597985,22.39698045,22.39698045,22.52501364,2054,22.39698045,NA
+61,Soteria-Control-0SOC-cell1,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,33.24673097,29.95919808,24.55845931,45.85953603,1506,24.55845931,0.9
+62,OE-LCO-6500mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,50.87448212,23.2963351,23.2963351,50.87448212,1554,23.2963351,0.6
+63,OE-LCO-6560mAh-0SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,23.49266278,23.248066,23.15699209,23.58447853,1591,23.15699209,2.4
+64,OE-LCO-6550mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,23.22742545,23.0446009,22.88596909,23.39509576,1504,22.88596909,11.1
+65,OE-LCO-6400mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.0723503,23.54491,23.54491,31.5529079,1560,23.54491,1
+66,OE-LFP10Ah-40SOC-cell8,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,19.04508,18.88738,18.79484,19.21335,532,18.79484,20.5
+67,OE-LFP10Ah-80SOC-cell3,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,17.69875,17.69711,17.6963,17.7098,610,17.6963,36.1
+68,OE-LFP10Ah-80SOC-cell4,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,17.40781,17.38713,17.30117,17.40781,592,17.30117,NA
+69,OE-LFP10Ah-100SOC-cell1,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,21.12788,21.07,21.029505,21.12788,738,21.029505,NA
+70,OE-LFP10Ah-100SOC-cell12,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,19.80805,19.714,19.67463,19.83343,632,19.67463,129.7
+71,OE-10AHr-NMC-40SOC-Cell4,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,22.8260664,22.75894208,22.2706698,22.8832296,364,22.2706698,2.3
+72,OE-10Ahr-NMC-0SOC-cell2,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,22.89395173,22.81695716,22.80361091,22.90199526,411,22.80361091,6.7
+73,LFP10Ah-60SOC-Cell17,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,17.21325,17.17424,17.167185,17.22488,595,17.167185,35
+74,OE-LFP10Ah-80SOC-cell13,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,22.64275149,22.66746239,22.63555143,22.798374,1834,22.63555143,14.3
+75,2000mAh1-60S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.572,24.401,24.27,24.572,1383,24.27,31.8
+76,2000mAh1-80S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.385,24.173,24.173,24.628,1450,24.173,14.6
+77,2000mAh1-100S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.723,24.4225,24.187,24.821,1508,24.187,30.2
+78,2000mAh2-60S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.2755,24.258,24.203,24.327,1547,24.203,36.8
+79,2000mAh2-80S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.439,24.391,24.359,24.499,1546,24.359,35.8
+80,2000mAh2-100S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,24.7575,24.705,24.623,24.94,1504,24.623,31.1
+81,OE-NMC10Ah-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,21.95735,21.95735,21.95735,21.95735,41,21.95735,Inf
+82,OE-NMC10Ah-20SOC-cell2,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,23.2189344,23.2189344,23.207592,23.24138891,1856,23.207592,3.9
+83,Soteria-Control-5030mAh-10SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,38.216895,38.216895,35.532799,46.6689541,1606,35.532799,0.7
+84,Soteria-control-10SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,25.15702564,23.46056333,23.38349792,39.5041076,1711,23.38349792,1
+85,OE-LCO-6490mAh-60SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,49.41593609,52.04710821,50.3921281,49.41593609,1455,50.3921281,-0.3
+86,OE-LCO-6270mAh-40SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,56.02730535,48.3199371,48.3199371,56.02730535,1666,48.3199371,0.1
+87,OE-LCO-6500mAh-40SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,22.58137,22.35366673,22.319846,22.6623942,1178,22.319846,51.7
+88,Soteria-Control-50SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,31.43946697,28.26865529,22.69476424,31.43946697,1820,22.69476424,4
+89,OE-10Ahr-NMC-40SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,23.5204094,23.50988627,23.40483303,23.55217455,484,23.40483303,4.1
+90,OE-10Ahr-NMC-0SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,23.07361836,22.91496522,22.81822459,23.12099212,918,22.81822459,4.5
+91,OE-NMC10Ah-45SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,23.1451858,23.12070218,23.085646,23.1514477,1920,23.085646,Inf
+92,OE-NMC10Ah-45SOC-cell2,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,23.02431716,23.059966,23.01336672,23.05913525,1820,23.01336672,30.3
+93,Soteria-Control-5120mAh-50SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,22.551776,22.5014898,22.4480418,22.551776,1653,22.4480418,1.7
+94,Soteria-Control-5010mAh-20SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,23.06430717,23.06430717,23.06430717,27.83937263,1632,23.06430717,0.6
+95,Sorteria-control-20SOC-cell1,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,43.86500398,41.81775773,32.10103265,48.46666209,1143,32.10103265,0.6
+96,Soteria-control-30SOC-cell2,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,23.66727,23.59657098,23.59657098,23.80288881,1728,23.59657098,3.1
+97,Soteria-control-30SOC-cell1,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,21.72556703,21.72556703,21.72556703,21.76899208,51,21.74862758,1.2
+98,Soetria-Control-45SOC-cell1,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,48.45149902,48.45149902,34.427155,59.13301841,1782,34.427155,0.1
+99,Sorteria-control-40SOC-cell2,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,49.59733455,44.33564194,22.57304955,59.84467149,1656,22.57304955,0.2
+100,OE-LCO-6470mAh-60SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,25.0799025,24.6414462,22.2784473,25.3925725,1328,22.2784473,3
+101,Soteria-control-5100mAh-50SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,50.5218042,50.5218042,40.02432333,57.97108667,1748,40.02432333,0
+102,Soteria-Control-5100mAh-55SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,47.328264,47.93772818,47.93772818,43.00231211,1554,47.93772818,3.3
+103,Sorteria-Control-100SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,37.6758664,30.5127956,36.63324209,37.6758664,1247,36.63324209,0.4
+104,Sorteria-Control-100SOC-cell2,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,36.9038768,30.0841992,30.16964507,36.9038768,1247,30.16964507,0.4
+105,LCO-LP-6400mAh-100SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,27.224039,29.4768603,29.4768603,24.365855,2000,29.4768603,0.6
+106,LCO-LP-6400mAh-100SOC-cell2,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,28.5719916,35.9170672,35.9170672,23.9835579,2016,35.9170672,2.5
+107,LCO-LP-6400mAh-80SOC-Cell3,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,45.03939892,50.12099636,53.23118052,34.48375333,1938,53.23118052,-0.2
+108,LCO-LP6400mAh-80SOC-cell4,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,54.8312056,54.8312056,50.3967516,36.63198023,1500,50.3967516,-0.1
+109,Soetria-80SOC-cell3,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,47.80332061,37.174247,37.174247,47.80332061,1802,37.174247,2.1
+110,Sorteria-Control-60SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,22.2808056,22.3294664,22.3166892,22.3480817,1720,22.3166892,5.8
+111,OE-10Ahr-NMC-70SOC-cell7,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,59.993952,43.822961,43.822961,60.15371525,570,43.822961,0.1
+112,OE-10Ahr-NMC-80SOC-cell8,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,23.91690574,22.38401606,22.42147,24.11828455,33,22.42147,60.1
+113,OE-10Ahr-NMC-80SOC-Cell9,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,22.52266851,22.5006315,22.4483935,23.124741,448,22.4483935,8.5
+114,OE-10Ahr-NMC-100SOC-cell10,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,22.54004224,22.54004224,22.54004224,22.58545782,600,22.54004224,1.3
+115,OE-10Ahr-NMC-100SOC-cell11,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,25.7046497,31.8973318,35.5842898,58.795635,406,35.5842898,0.4
+116,OE-10Ahr-NMC-70SOC-cell6,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,56.89799209,57.61107368,56.231654,43.41663526,571,56.231654,-0.1
+117,OE-NMC10Ah-60SOC,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,23.08405836,23.08039848,23.044435,23.205485,2135,23.044435,14.7
+118,OE-NMC10Ah-50SOC,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,37.9172604,38.6507384,35.1809972,32.65732263,2256,35.1809972,18.9
