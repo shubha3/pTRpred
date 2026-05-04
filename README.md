@@ -45,19 +45,18 @@ pTRPred/
 ├── datasets/
 │   ├── Simulated
 │   |   └── data_generating_process
-│   |   └── generated_data
-│   |   
+│   |   └── generated_data   
 │   ├── NREL   
-│   |   └── Plots
-│   |   └── Battery_cells
-│   |        └── raw_data
-│   |        └── SVD_result
-│   |        └── mean_load_prop_analysis
-│   |        └── processed_data
-│   |   └── Sensitivity_Analysis
-│   |   └── readme.md
-│   |
-│   |
+│       └── Plots
+│       └── Battery_cells
+│       └── raw_data
+│       └── SVD_result
+│       └── mean_load_prop_analysis
+│       └── processed_data
+│       └── Sensitivity_Analysis
+│       └── readme.md
+│   
+│   
 ├── pyproject.toml
 ├── uv.lock
 
