@@ -1,7 +1,60 @@
 # pTRPred: Python Version of TRPred
 ## File structure
 
-
+pTRPred/
+│
+├── README.md
+├── requirements.txt
+├── tests/
+│   └── __pycache__
+|   └── test_kernelpca.py
+|   └── test_rollsvd.py
+|   └── test_windows.py
+|   └── test_preprocessing.py
+|   └── test_plotting.py
+|   └── test_detection.py
+|   └── test_arimax.py
+|   └── conftest.py
+│
+├── Reproducible_Plots/
+│   ├── NREL_Data_Visualizations
+│   ├── NREL_Plots
+│   └── NREL_Plots_SVD
+│   └── NREL_Dataset
+│   └── Simulated_Datasets
+│   └── Simulated_Datasets_Plots
+│   └── SVD_result
+│   └── T_results
+│   └── Reproduce_Plots.ipynb
+│
+|
+├── src/
+│   ├── pTRPred/
+│       └── signals.py
+│       └── offline.py
+│       └── arimax.py
+│       └── detection.py
+│       └── plotting.py
+│       └── preprocessing.py
+│       └── rollsvd.py
+│       └── windows.py
+│       └── incremental.py
+│       └── signals.py
+│      
+├── datasets/
+│   ├── Simulated
+│   |   └── data_generating_process
+│   |   └── generated_data
+│   |   
+│   ├── NREL   
+│   |   └── Plots
+│   |   └── Battery_cells
+│   |        └── raw_data
+│   |        └── SVD_result
+│   |        └── mean_load_prop_analysis
+│   |        └── processed_data
+│   |   └── Sensitivity_Analysis
+│   |   └── readme.md
 
 
 ## Install 
