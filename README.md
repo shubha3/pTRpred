@@ -1,6 +1,7 @@
 # pTRPred: Python Version of TRPred
 ## File structure
 
+```text
 pTRPred/
 │
 ├── README.md
@@ -55,7 +56,7 @@ pTRPred/
 │   |        └── processed_data
 │   |   └── Sensitivity_Analysis
 │   |   └── readme.md
-
+```
 
 ## Install 
 
