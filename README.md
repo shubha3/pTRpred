@@ -6,6 +6,7 @@ pTRPred/
 │
 ├── README.md
 ├── requirements.txt
+│
 ├── tests/
 │   └── __pycache__
 |   └── test_kernelpca.py
@@ -28,7 +29,6 @@ pTRPred/
 │   └── T_results
 │   └── Reproduce_Plots.ipynb
 │
-|
 ├── src/
 │   ├── pTRPred/
 │       └── signals.py
@@ -55,7 +55,6 @@ pTRPred/
 │       └── processed_data
 │       └── Sensitivity_Analysis
 │       └── readme.md
-│   
 │   
 ├── pyproject.toml
 ├── uv.lock
