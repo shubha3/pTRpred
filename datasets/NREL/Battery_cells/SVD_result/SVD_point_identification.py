@@ -1,6 +1,6 @@
 #SVD point identification, return the first point that the 
 #real-time detection value exceeds 0.3(threshold), it's subject to adjustment.
-
+#This script should be in the same directory as that of the SVD results datasets
 from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
