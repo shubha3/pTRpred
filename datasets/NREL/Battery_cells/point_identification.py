@@ -12,7 +12,8 @@ def identify_detection_points(threshold):
     df_result = pd.DataFrame({
         'dataset_name': [],
         'detection_point': [],
-        'trigger_temperature': []
+        'trigger_temperature': [],
+        'window_index': []
     })
     files_T = sorted([p for p in T_dir.glob("*_rt_detect_result_window100.csv")]) 
     for f in files_SVD:
@@ -29,9 +30,16 @@ def identify_detection_points(threshold):
             trigger_temperature = df_T.loc[detection_point - 30, "temperature"].item()
         else:
             trigger_temperature = np.nan
+        #extract the window index
+        if detection_point > 0:
+            window_index = (detection_point - 100)//30
+        else:
+            window_index = np.nan
+        #get the 
         new_row = pd.DataFrame({'dataset_name': [dataset_name],
             'detection_point': [detection_point],
-            'trigger_temperature': [trigger_temperature]})
+            'trigger_temperature': [trigger_temperature],
+            'window_index': [window_index]})
         df_result = pd.concat([df_result, new_row], ignore_index = True)
         df_result.to_csv("detection_point_trigger.csv")
         print(f"Processing complete. Threshold used: {threshold}")
