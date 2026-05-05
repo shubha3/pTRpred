@@ -217,18 +217,6 @@ fig, ax1, ax2 = plot_detection_overlay(
 ### The reproducible plot script.
 https://colab.research.google.com/drive/1EXFeAl4LKNc5g1uMUyUgaCJPGTfzSDm2#scrollTo=ZFTesc-XlR7T
 
-### project-name/
-│
-├── README.md
-├── requirements.txt
-├── config/
-│   └── default_config.yaml
-│
-├── datasets/
-│   ├── NREL/
-│   ├── processed/
-│   └── README.md
-│   └── README.md  
 
 
 
