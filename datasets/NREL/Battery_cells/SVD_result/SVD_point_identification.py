@@ -32,4 +32,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     identify_detection_points(args.threshold)
 
-#Call this function:   python detect.py 0.3
+#Call this function:   python SVD_point_identification.py 0.3
