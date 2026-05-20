@@ -8,7 +8,7 @@ import pandas as pd
 def identify_detection_points(threshold):
     SVD_dir = Path('SVD_result')
     T_dir = Path('T_result')
-    files_SVD = sorted([p for p in proc_dir.glob("*_SVD_detects.csv") ])
+    files_SVD = sorted([p for p in SVD_dir.glob("*_SVD_detects.csv") ])
     df_result = pd.DataFrame({
         'dataset_name': [],
         'detection_point': [],
