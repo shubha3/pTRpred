@@ -19,7 +19,7 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import StratifiedKFold
 from sklearn.metrics import accuracy_score, precisio_recall_fscore_support, confusion_matrix
 
-
+Pipeline([Random])
 
 def find_files(dataset_name, severity_level):
     stem = f"{dataset_name}.xlsx_reform_severity_level{severity_level}.csv_rt_detect_result_window100.csv"
@@ -119,10 +119,8 @@ class BatteryDataset(Dataset):
     def __init__(self, sequences: np.ndarray, labels: np.ndarray):
         self.X = sequences  # (N, max_len)
         self.y = labels    # (N,)
-
     def __len__(self):
         return len(self.y)
-
     def __getitem__(self, i):
         x = torch.from_numpy(self.X[i])
         y = torch.tensor(self.y[i], dtype=torch.long)
@@ -235,11 +233,9 @@ def run_kfold(X: np.ndarray, y: np.ndarray) -> dict:
         val_ds = BatteryDataset(X_val, y_val)
         train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
         val_loader = DataLoader(val_ds, batch_size=BATCH_SIZE)
-
         model = BatteryTransformer().to(device)
         optimizer = torch.optim.AdamW(model.parameters(), lr=LR)
         criterion = nn.CrossEntropyLoss()
-
         best_acc = 0
         for epoch in range(EPOCHS):
             train_epoch(model, train_loader, optimizer, criterion, device)
@@ -266,4 +262,33 @@ def run_kfold(X: np.ndarray, y: np.ndarray) -> dict:
         "confusion_matrix": confusion_matrix(all_labels, all_preds),
         "precision_recall_f1": precision_recall_fscore_support(all_labels, all_preds, average="binary"),
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

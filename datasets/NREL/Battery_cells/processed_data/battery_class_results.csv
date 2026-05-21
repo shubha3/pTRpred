@@ -1,0 +1,121 @@
+﻿dataset_name,severity_description.x,severity_level,Conclusion,second_buy,Label,battery
+1500mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,FP,71,0,Rec
+500mAh3-20S0C,"No effect, local heating, internal discharge – 2",2,FP,101,0,Rec
+500mAh3-60S0C,"No effect, local heating, internal discharge – 2",2,FP,103.5,0,Rec
+LFP10Ah-60SOC-Cell17,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,FP,130.9,0,LCFP
+OE-LFP10Ah-100SOC-cell1,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,FP,-9999,0,LFP
+OE-LFP10Ah-100SOC-cell12,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,FP,32.5,0,LFP
+OE-LFP10Ah-100SOC-cell2,"No effect, local heating, internal discharge – 2",2,FP,-9999,0,LFP
+OE-LFP10Ah-60SOC,"No effect, local heating, internal discharge – 2",2,FP,-16.6,0,LFP
+OE-LFP10Ah-70SOC-cell5,"No effect, local heating, internal discharge – 2",2,FP,133.7,0,LFP
+OE-LFP10Ah-70SOC-cell6,"No effect, local heating, internal discharge – 2",2,FP,-9999,0,LFP
+OE-LFP10Ah-80SOC-cell3,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,FP,128.3,0,LFP
+OE-LFP10Ah-80SOC-cell4,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TN,-9999,0,LFP
+OE-NMC10Ah-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TN,-9999,0,NMC
+Sorteria-100SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Sorteria-100SOC-cell2,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-20SOC-5180mAh,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-4160mAh-100SOC-8mm,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-4630mAh-10SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-4720mAh-40SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-4870mah-0SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-5050mAhr-100SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-5070-70SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-5080mAh-20SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-5170mAh-60SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-60SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-80SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+Soteria-SCC-90SOC-cell1,"No effect, instant local Joule heating, no internal discharge – 1",1,FP,-9999,0,SO
+1500mAh1-100S0C,"No effect, local heating, internal discharge – 2",2,TP,76.2,1,Rec
+1500mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,TP,73,1,Rec
+1500mAh1-60S0C,"No effect, local heating, internal discharge – 2",2,TP,61.7,1,Rec
+1500mAh1-80S0C,"No effect, local heating, internal discharge – 2",2,TP,78.9,1,Rec
+1500mAh2-100S0C,"No effect, local heating, internal discharge – 2",2,TP,53.2,1,Rec
+1500mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,TP,61.9,1,Rec
+1500mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,TP,85.5,1,Rec
+1500mAh2-60S0C,"No effect, local heating, internal discharge – 2",2,TP,75.9,1,Rec
+1500mAh2-80S0C,"No effect, local heating, internal discharge – 2",2,TP,75.5,1,Rec
+1500mAh3-100S0C,"No effect, local heating, internal discharge – 2",2,TP,72.8,1,Rec
+1500mAh3-20S0C,"No effect, local heating, internal discharge – 2",2,TP,64.7,1,Rec
+1500mAh3-40S0C,"No effect, local heating, internal discharge – 2",2,TP,69.4,1,Rec
+1500mAh3-60S0C,"No effect, local heating, internal discharge – 2",2,TP,67,1,Rec
+1500mAh3-80S0C,"No effect, local heating, internal discharge – 2",2,TP,76.9,1,Rec
+2000mAh1-100S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,44.4,1,Rec
+2000mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,TP,70,1,Rec
+2000mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,TP,62.2,1,Rec
+2000mAh1-60S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,55.3,1,Rec
+2000mAh1-80S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,65.8,1,Rec
+2000mAh2-100S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,43.9,1,Rec
+2000mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,TP,45.8,1,Rec
+2000mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,TP,44.9,1,Rec
+2000mAh2-60S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,33.9,1,Rec
+2000mAh2-80S0C,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,35,1,Rec
+500mAh1-100S0C,"No effect, local heating, internal discharge – 2",2,TP,92.5,1,Rec
+500mAh1-60S0C,"No effect, local heating, internal discharge – 2",2,TP,82.8,1,Rec
+500mAh1-80S0C,"No effect, local heating, internal discharge – 2",2,TP,93.5,1,Rec
+500mAh2-100S0C,"No effect, local heating, internal discharge – 2",2,TP,103.2,1,Rec
+500mAh2-20S0C,"No effect, local heating, internal discharge – 2",2,TP,89.8,1,Rec
+500mAh2-40S0C,"No effect, local heating, internal discharge – 2",2,TP,97,1,Rec
+500mAh2-60S0C,"No effect, local heating, internal discharge – 2",2,TP,105.8,1,Rec
+500mAh2-80S0C,"No effect, local heating, internal discharge – 2",2,TP,113.4,1,Rec
+500mAh3-100S0C,"No effect, local heating, internal discharge – 2",2,TP,124,1,Rec
+500mAh3-40S0C,"No effect, local heating, internal discharge – 2",2,TP,115.4,1,Rec
+500mAh3-80S0C,"No effect, local heating, internal discharge – 2",2,TP,119.3,1,Rec
+LCO-LP-6400mAh-100SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,24.8,1,LCO
+LCO-LP-6400mAh-100SOC-cell2,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,21.3,1,LCO
+LCO-LP-6400mAh-80SOC-Cell3,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,31.8,1,LCO
+LCO-LP6400mAh-80SOC-cell4,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,75.5,1,LCO
+OE-10Ahr-NMC-100SOC-cell11,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,184.4,1,NMC
+OE-10Ahr-NMC-40SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,172.9,1,NMC
+OE-10AHr-NMC-40SOC-Cell4,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,186.7,1,NMC
+OE-10Ahr-NMC-70SOC-cell6,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,168.4,1,NMC
+OE-10Ahr-NMC-70SOC-cell7,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,168.3,1,NMC
+OE-10Ahr-NMC-80SOC-cell8,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,162,1,NMC
+OE-10Ahr-NMC-80SOC-Cell9,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,FP,172.1,1,NMC
+OE-LCO-6400mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,68.4,1,LCO
+OE-LCO-6470mAh-60SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,TP,89.6,1,LCO
+OE-LCO-6490mAh-60SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,FN,80.2,1,LCO
+OE-LCO-6500mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,69.4,1,LCO
+OE-LCO-6500mAh-40SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,55.9,1,LCO
+OE-LCO-6550mAh-20SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,63.9,1,LCO
+OE-LCO-6560mAh-0SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,63.9,1,LCO
+OE-LFP-cell14-60SOC-10Ah,"No effect, local heating, internal discharge – 2",2,TP,-1.2,1,LFP
+OE-LFP10Ah-0SOC-cell10,"No effect, local heating, internal discharge – 2",2,FP,-9999,1,LFP
+OE-LFP10Ah-0SOC-cell9,"No effect, local heating, internal discharge – 2",2,TP,119.2,1,LFP
+OE-LFP10Ah-20SOC,"No effect, local heating, internal discharge – 2",2,FP,-9999,1,LFP
+OE-LFP10Ah-40SOC-cell7,"No effect, local heating, internal discharge – 2",2,TP,135.3,1,LFP
+OE-LFP10Ah-40SOC-cell8,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,151.7,1,LFP
+OE-LFP10Ah-80SOC-Cell15,"No effect, local heating, internal discharge – 2",2,TP,149.6,1,LFP
+OE-NMC10Ah-20SOC-cell2,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,35.9,1,NMC
+OE-NMC10Ah-45SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,FP,-9999,1,NMC
+OE-NMC10Ah-45SOC-cell2,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,13.1,1,NMC
+OE-NMC10Ah-50SOC,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,FN,-19.1,1,NMC
+OE-NMC10Ah-60SOC,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,-2.8,1,NMC
+Soetria-80SOC-cell3,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,43.1,1,SO
+Soetria-Control-45SOC-cell1,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,TP,47.1,1,SO
+Sorteria-Control-100SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,100.3,1,SO
+Sorteria-Control-100SOC-cell2,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,100.3,1,SO
+Sorteria-control-20SOC-cell1,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,TP,110.5,1,SO
+Sorteria-control-40SOC-cell2,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,TP,59.6,1,SO
+Sorteria-Control-60SOC-cell1,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,TP,47.6,1,SO
+Soteria-Control-0SOC-cell1,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,73.9,1,SO
+Soteria-control-10SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,53.3,1,SO
+Soteria-control-30SOC-cell1,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,TP,-9999,1,SO
+Soteria-control-30SOC-cell2,"Physical effect (pouch swelling), extended joule heating, local reactions – 5",5,TP,49.5,1,SO
+Soteria-Control-5010mAh-20SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,61.6,1,SO
+Soteria-Control-5030mAh-10SOC,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,TP,64.1,1,SO
+Soteria-Control-50SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,39.4,1,SO
+Soteria-control-5100mAh-50SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,TP,50.6,1,SO
+Soteria-Control-5100mAh-55SOC,"Physical effect (pouch swelling), rupture of pouch, gas release –  6",6,TP,66.7,1,SO
+Soteria-Control-5120mAh-50SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,TP,58.4,1,SO
+500mAh1-20S0C,"No effect, local heating, internal discharge – 2",2,FP,-9999,2,Rec
+500mAh1-40S0C,"No effect, local heating, internal discharge – 2",2,NA,69.1,2,Rec
+OE-10Ahr-NMC-0SOC-cell1,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",4,NA,129.1,2,NMC
+OE-10Ahr-NMC-0SOC-cell2,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,NA,177.6,2,NMC
+OE-10Ahr-NMC-100SOC-cell10,"Physical effect, rupture of pouch, smoke, gas release, fire – 7",7,NA,164.1,2,NMC
+OE-LCO-6270mAh-40SOC,"Moderate effect, extended joule heating, local reactions (limited spread) – 4",,DID NOT DETECT EARLY,58.7,2,LCO
+OE-LCO-6340mAh-0SOC,"No effect, instant local Joule heating, no internal discharge – 1",1,NA,78.8,2,LCO
+OE-LFP10Ah-80SOC-cell13,"Moderate effect, extended joule heating, local reactions (no spread) – 3",3,NA,27.7,2,LFP
+Soteria-SCC-4700mAh-100SOC-12mm,"No effect, instant local Joule heating, no internal discharge – 1",,,-9999,2,SO
+,,,#VALUE!,#DIV/0!,,
+,,,,-9999,,
