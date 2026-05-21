@@ -479,7 +479,7 @@ cat_transformer = Pipeline(steps = [
 
 
 def mean_pooling(model_output, attention_mask):
-    
+    model_output.mean(axis = 1)#attention_mask here.
 
 
 
@@ -495,6 +495,90 @@ def mean_pooling(model_output, attention_mask):
 
 
 
+
+######
+#SUM OVER(PARTITION BY ORDER BY BETWEEN CURRENT +1 AND UNBOUNDED FOLLOWING AND UNBOUNDED PRECEDING)
+
+   
+
+def loss_function(linear_pred, y, task = 'classification'):
+    if task == 'classification':
+        return - y @ linear_pred + cp.sum(cp.logistic(linear_predictor))
+    else:
+        return cp.sum_squares(linear_pred - y)
+    else:
+        raise ValueError('task must be classification or regression')
+
+def estimate_delta(X_T, Y_T, lambda_reg, fitted_model = None,
+    f_x = None, task = 'classification'):
+    n_T, n_p = X_T.shape
+    delta = cp.Variable(p)
+    if f_x is None:
+        f_x = get_offset_f_x(X_T, fitted_model, task = task)
+    linear_predictor = f_x + X_T @ delta
+    raw_loss = loss_function(linear_predictor, Y_T, task = task)
+    loss_avg = raw_loss/n_T
+    #Impose the L1 regularization:
+    l1_penalty = lambda_reg * cp.norm1(deltas)
+    total_loss = loss_avg + l1_penalty
+    problem = cp.Problem(cp.Minimize(total_loss))
+    problem.solve(solver = cp.SCS, verbose = False)
+    if delta.value is not None:
+        return delta.value
+    else:
+        raise ValueError('optimization did not converge')
+
+#Estimate delta:
+X_T = np.random.random((1000, 20))
+Y_T = np.random.random((1000, ))
+lambda_reg = 0.5#Penalized Regression:
+
+
+def CV_lambda(X_T, Y_T, fitted_model, lambdas, misspecified, X_S = None,
+    Y_S = None, k = 5, task = 'classification'):
+    for lambda_reg in lambdas:
+        fold_losses = []
+        for train_index, val_index in kf.split(X_T):
+            X_train, X_val = X_T[train_index], X_T[val_index]
+            Y_train, Y_val = Y_T[train_index], Y_T[val_index]
+            f_x_val = get_offset_f_x(X_val, fitted_model)
+            linear_predictor_val = f_x_val + X_val @ (beta_estimated + delta_estimated)
+            k_nonzero = np.sum(np.abs(np.concatenate([beta_estimated, delta_estimated])) > 1e-4)
+            delta_estimation = estimate_delta()
+
+
+
+#sample by proportion:
+df.groupby('category_colu', group_keys = False).apply(lambda X: X.sample(frac = 0.2))
+stratified_df = df.groupby('category_column', group_keys = False).apply(lambda X: X.sample(n = 500))
+#frac --> 
+
+#Fitting it via the sm, building this pipeline here.
+import collections
+def downsample(X, y, n_downsample, random_state = 42):
+    counter_y = collections.Counter(y)
+    minority_class = sorted({k: v for k, v in counter_y.items()}, key = lambda X: X[1], reversed = True)
+    majority_class = sorted({k: v for k, v in counter_y.items()}, key = lambda X: X[1])
+    X_resample = []
+    y_resample = []
+    for sub_class in counter_y.keys():
+        X_subclass = X[y == sub_class]
+        Y_subclass = y[y == sub_class]
+        X_majority_downsampled, Y_majority_downsampled = resample(
+            X_subclass, Y_subclass, replace = False,
+            n_samples = 0.5 * 
+            )
+        X_resample.append(X_majority_downsampled)
+        Y_resample.append(Y_majority_downsampled)
+    return np.concatenate(X_resample), np.concatenate(Y_resample)
+
+
+
+
+#
+y_subs = np.random.choice([1,2,3], p = [0.6, 0.25, 0.15], size = 1000)
+
+X_downsample, Y_downsample = downsamlpe(X, y_subs)
 
 
 
