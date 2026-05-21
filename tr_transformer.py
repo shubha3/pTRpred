@@ -273,19 +273,34 @@ for file in file_battery:
     y = 
     ds = TensorDataset(torch.from_numpy(X), torch.from_numpy(y))
     #Run Kfold for the DataLoader()
+    n_val = max(1, int(n * 0.25))
+    n_train = n - n_val
+    train_ds, val_ds = random_split(ds, [n_train, n_val],
+        generator = torch.Generator().manual_seed(2026))
+    train_dl = DataLoader(train_ds, batch_size = 24, shuffle = True)
+    val_dl = DataLoader(val_ds, batch_size = 24)
+
 
     
     
     
 
-
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
+import os
+import numpy as np
+import pandas as pd
+import warnings
+import sys
+import argparse
+from pathlib import Path
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV, RandomizedSearchCV
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
-from sklearn.preprocessing import Pipeline
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
 
 dfX = np.random.random((10000, 100))
 Y = np.random.random((10000, ))
-X_train, Y_train, X_test, Y_test = train_test_split(dfX, Y, test_size = 0.25)
+X_train, X_test, Y_train, Y_test = train_test_split(dfX, Y, test_size = 0.25)
 
 pipeline = Pipeline(steps = [
     ('scaler', StandardScaler()),
@@ -293,11 +308,179 @@ pipeline = Pipeline(steps = [
 ])
 
 param_grid = {
-    'RF__n_estimators': [100, 150, 200],
+    'RF__n_estimators': [100, 150],
     'RF__max_depth': [2, 4, 6, 8]
 }
-grid_search = GridSearchCV(pipeline, param_grid, cv = 10)
-grid_search.fit(dfX, Y)
+grid_search = GridSearchCV(pipeline, param_grid, cv = 5)
+grid_search.fit(X_train, Y_train)
+
+
+random_search2 = RandomizedSearchCV(pipeline, param_grid, cv = 5)
+random_search2.fit(X_train, Y_train)
+
+
+import xgboost
+
+xgboost.train(params, new_xg_train, n_boost_total - start, xgb_model = model_fit_initial)
+for j in range(n_boost_total - start):
+    df_pred_mat_tr_B[i, :, j] = model_new[j+start].predict(xgboost.DMatrix(B_X))
+    df_pred_mat_te_B[i, :, j] = model_new[j+start].predict(xgboost.DMatrix())
+
+
+
+from sklearn.preprocessing import StandardScaler, OneHotEncoder, MinMaxScaler, Normalizer, OrdinalEncoder, LabelEncoder, TargetEncoder
+
+np.lib.stride_tricks.as_strided
+
+X = np.array(np.arange(1000), dtype = np.int64)
+windows = as_strided(X, shape = (3, 3), strides = (8, 8))
+
+
+
+#binary classification:
+dfX = np.random.random((10000, 100))
+
+###############
+import pandas as pd
+cities = ['北京', '上海']
+days = ['周一', '周二']
+idx = pd.MultiIndex.from_product([cities, days], names = ["City", "Day"])
+df = pd.DataFrame(index = idx).reset_index()
+#4 tables, 7 csv files, 
+
+
+#Train a variety of different types of ML models and conduct the evaluation here:
+X = np.random.random((10000, 25))
+X1 = np.random.choice([-1, 1, 1], size = 10000, replace = True)
+X2 = np.random.choice([-1, 2, 5], size = 10000, replace = True)
+X3 = np.random.choice([-8, 3, 12], size = 10000, replace = True)
+df_X = np.column_stack([X, X1, X2, X3])
+Y = np.random.choice([0, 1], size = 10000)
+
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier, HistGradientBoostingClassifier
+from sklearn.metrics import check_scoring
+from sklearn.model_selection import train_test_split, StratifiedKFold
+from sklearn.preprocessing import LabelEncoder, OrdinalEncoder, FunctionTransformer
+from sklearn.linear_model import LogisticRegression, Ridge, LassoCV, ElasticNet
+from sklearn.metrics import log_loss, roc_auc_score, average_precision_score, mean_squared_error, mean_absolute_error, accuracy_score, precision_recall_fscore_support, confusion_matrix
+from sklearn.pipeline import make_pipeline
+from sklearn.svm import SVC, SVR
+from sklearn.neural_network import MLPClassifier
+from sklearn.kernel_approximation import RBFSampler
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.compose import ColumnTransformer
+
+X = np.random.random((10000, 25))
+X1 = np.random.choice([-1, 1, 1], size = 10000, replace = True)
+X2 = np.random.choice([-1, 2, 5], size = 10000, replace = True)
+X3 = np.random.choice([-8, 3, 12], size = 10000, replace = True)
+df_X = np.column_stack([X, X1, X2, X3])
+Y = np.random.choice([0, 1], size = 10000)
+
+con_ind = np.array(np.arange(25))
+cat_ind = np.array([25, 26, 27])
+preprocesser = ColumnTransformer(
+    transformers = [
+    ('ord', OrdinalEncoder(), cat_ind),
+    ('scaler', StandardScaler(), con_ind)
+    ],
+    remainder = 'passthrough'
+)
+#transformers = [
+#('ord', OrdinalEncoder(), cat_ind),
+#('scaler', StandardScaler(), con_ind)],
+#remainder = 'passthrough'
+preprocesser2 = ColumnTransformer(
+    transformers = [
+    ('ord', OrdinalEncoder(), cat_ind),
+    ('scaler', StandardScaler(), con_ind)
+    ],
+    remainder = 'passthrough'
+    )
+pipeline1 = Pipeline(
+    steps = [
+    ('preprocessor', preprocesser),
+    ('rf', RandomForestClassifier(max_depth = 5, random_state = 2026,
+        min_samples_split = 25, n_estimators = 150))
+    ])
+pipeline2 = Pipeline(
+    steps = [
+    ('preprocessor', preprocesser),
+    ('gbdt', GradientBoostingClassifier(n_estimators = 150,
+        max_depth = 5, learning_rate = 0.05))])
+pipeline3 = Pipeline(
+    steps = [
+    ('preprocessor', preprocesser2),
+    ('rf', RandomForestClassifier(max_depth = 5, random_state = 2026,
+        min_samples_split = 25, n_estimators = 150))
+    ])
+
+preprocesser4 = ColumnTransformer(
+    transformers = [
+    ('ord', OrdinalEncoder(), cat_ind),
+    ('scaler', StandardScaler(), con_ind)],
+    remainder = 'passthrough'
+    )
+pipeline4 = Pipeline(
+    steps = [
+    ('preprocessor', preprocesser),
+    ('gbdt', GradientBoostingClassifier(n_estimators = 150,
+        max_depth = 5, learning_rate = 0.05))]
+    )
+
+
+Y_pred1 = np.zeros(df_X.shape[0])
+Y_pred2 = np.zeros(df_X.shape[0])
+Y_pred3 = np.zeros(df_X.shape[0])
+SKF = StratifiedKFold(n_splits = 3)
+for train_index, test_index in SKF.split(dfX, Y):
+    X_train, X_test = dfX[train_index], dfX[test_index]
+    Y_train, Y_test = Y[train_index], Y[test_index]
+    #Then fit the model:
+    pipeline1.fit(X_train, Y_train)
+    Y_pred1[test_index] = pipeline1.predict_proba(X_test)[:, 1]
+    pipeline2.fit(X_train, Y_train)
+    Y_pred2[test_index] = pipeline2.predict_proba(X_test)[:, 1]
+    pipeline3.fit(X_train, Y_train)
+    Y_pred3[test_index] = pipeline3.predict_proba(X_test)[:, 1]
+
+#Output the evaluation metrics:
+result = {
+    'auroc': roc_auc_score(Y, Y_pred),
+    'auprc': average_precision_score(Y, Y_pred)
+}
+
+#
+for index, group_df in df.groupby('X1'):
+for index2, group_df in df.groupby('X2'):
+for index3, group_df in df.groupby('X3'):
+
+date_before = price_df.index[price_df.index <= d]
+np.vstack([Y_pred1.reshape(1, -1), Y_pred2.reshape(1, -1)])
+
+
+from sklearn.impute import SimpleImputer, KNNImputer, IterativeImputer
+from sklearn.experimental import enable_iterative_imputer
+
+pipeline = Pipeline(steps =[
+    ('preprocesser': preprocesser),
+    ("rf": RandomForestClassifier)
+    ])
+
+
+
+
+cat_transformer = Pipeline(steps = [
+    ('imputer': SimpleIMputer(strategy = 'most_frequent')),
+    ('ordinal': OrdinalEncoder())
+])
+
+
+
+
+def mean_pooling(model_output, attention_mask):
+    
+
 
 
 
