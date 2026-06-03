@@ -200,7 +200,7 @@ det_s1 = detect_realtime(
     signal=sig_s1["signal"].to_numpy(),
     burn_in=200,
     smooth_k=30,
-    threshold=1.3
+    threshold=0.3
 )
 
 fig, ax1, ax2 = plot_detection_overlay(
@@ -209,7 +209,7 @@ fig, ax1, ax2 = plot_detection_overlay(
     score_label="Detected value (votes)",
     signal_label="Top eigenvalue (s1)",
     x_label="Index",
-    threshold=1.3
+    threshold=0.3
 )
 ```
 ![](docs/figures/pTRPred_unittest3.png)
