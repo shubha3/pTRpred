@@ -10,7 +10,6 @@ import pandas as pd
 from .preprocessing import extract_X
 from .windows import roll_windows
 
-
 def roll_kernel_pca(
     data: pd.DataFrame,
     time: str,
@@ -32,18 +31,20 @@ def roll_kernel_pca(
     """
     Rolling Kernel PCA: first component eigenvalue per window (analogous to roll_svd s1).
 
-    Uses sklearn.decomposition.KernelPCA per window. Returns a dict with:
+    Uses sklearn.decomposition.KernelPCA per window to extract the eigenvalues and eigenvcetors.
+    Return a dictionary including:
       - windows : DataFrame from roll_windows (one row per window)
-      - D       : list of 1D arrays (eigenvalues of centered kernel matrix, first component)
-      - scores  : list of (n_w, n_components) arrays (projected data) or None
-      - colnames: list of feature names
+      - D       : List of 1D arrays (eigenvalues of centered kernel matrix, first component)
+      - scores  : List of (n_w, n_components) arrays (projected data) or None
+      - colnames: List of feature names
       - preproc : {'center': bool, 'scale.': bool}
-      - kernel  : kernel name
+      - kernel  : kernel name - can be 'rbf', 'poly', 'linear' or 'cosine'
 
     Parameters
     ----------
     kernel : 'rbf' (default), 'poly', 'linear', 'cosine'
     gamma  : kernel coefficient for rbf/poly; if None, use 1/n_features
+
     """
     try:
         from sklearn.decomposition import KernelPCA
@@ -52,28 +53,24 @@ def roll_kernel_pca(
         raise ImportError(
             "roll_kernel_pca requires scikit-learn. Install with: pip install scikit-learn"
         )
-
     if time not in data.columns:
         raise ValueError("`time` must be a column in `data`.")
     if seed is not None:
         np.random.seed(seed)
-
+    #extract the list of the running windows.
     windows = roll_windows(data[time].to_numpy(), window, step, align, type)
     X_all = extract_X(data, x_cols)
     colnames = list(X_all.columns)
     p = X_all.shape[1]
     if gamma is None:
         gamma = 1.0 / max(p, 1)
-
     nW = windows.shape[0]
     D_list: List[Optional[np.ndarray]] = [None] * nW
     scores_list: List[Optional[np.ndarray]] = [None] * nW
-
     for w in range(nW):
         idx_1b = windows.iloc[w]["idx"]
         idx_0b = [i - 1 for i in idx_1b]
         Xw = X_all.iloc[idx_0b, :].copy()
-
         if na_action == "omit_rows":
             Xw = Xw.dropna(axis=0, how="any")
         elif na_action == "impute_mean":
@@ -89,16 +86,15 @@ def roll_kernel_pca(
             raise ValueError(
                 "`na_action` must be one of {'omit_rows','impute_mean','pairwise_complete'}"
             )
-
         n_w = Xw.shape[0]
         if n_w < 2:
             continue
-
+        #Do the standard scaler:
         X_mat = Xw.to_numpy(dtype=float)
         if center or scale_:
             scaler = StandardScaler(with_mean=center, with_std=scale_)
             X_mat = scaler.fit_transform(X_mat)
-
+        #Conduct the Kernel PCA procedure for the running window:
         try:
             kpca = KernelPCA(
                 n_components=n_components,
@@ -123,7 +119,6 @@ def roll_kernel_pca(
             scores_list[w] = X_proj
         except Exception:
             continue
-
     return {
         "windows": windows,
         "D": D_list,

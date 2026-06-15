@@ -1,3 +1,4 @@
+"""Signal construction utilities (raw, SVD, kernel PCA, ARIMAX residuals)."""
 from __future__ import annotations
 
 from typing import Any, Literal, Optional, Sequence
@@ -40,7 +41,9 @@ def build_signal_svd(
     cov_on_pairwise: bool = True,
     seed: Optional[int] = None,
 ) -> pd.DataFrame:
-    """Rolling SVD top eigenvalue (s1) → (t_rep, s1)."""
+    """
+    Build the signal of the SVD rolling window procedure -> (t_rep, first_singular_value)
+    """
     fit = roll_svd(
         data=data,
         time=time,
@@ -81,7 +84,6 @@ def build_signal_kernel_pca(
 ) -> pd.DataFrame:
     """
     Rolling Kernel PCA first eigenvalue per window → (t_rep, signal).
-
     Same interface as build_signal_svd; signal = first component eigenvalue of kernel matrix.
     """
     fit = roll_kernel_pca(
@@ -121,10 +123,11 @@ def build_signal_arimax_resid(
     approximation: bool = False,
     **kwargs: Any,
 ) -> pd.DataFrame:
-    """ARIMAX residuals (single y + predictors) → (time_ind, residual)."""
+    """ARIMAX residuals (single y + predictors) → (time_ind, residual).
+    So that to run the arimax procedure
+    """
     if time not in data.columns:
         raise ValueError("`time` must be a column in `data`.")
-
     y_df = extract_X(data, y_col)
     if y_df.shape[1] != 1:
         raise ValueError("`y_col` must select exactly one column.")
@@ -139,7 +142,6 @@ def build_signal_arimax_resid(
         approximation=approximation,
         **kwargs,
     )
-
     return pd.DataFrame({"time_ind": t[fit["mask"]], "signal": fit["residuals"]})
 
 
@@ -163,7 +165,10 @@ def build_signal_arimax_svd(
     seed: Optional[int] = None,
     **kwargs: Any,
 ) -> pd.DataFrame:
-    """ARIMAX residuals for multiple series → rolling SVD s1 → (t_rep, s1)."""
+    """
+    ARIMAX residuals for multiple series → rolling SVD s1 → (t_rep, s1).
+    so that to run the SVD procedure on the running windows
+    """
     arx = arimax_residuals_df(
         data=data,
         time=time,
@@ -174,10 +179,9 @@ def build_signal_arimax_svd(
         approximation=approximation,
         **kwargs,
     )
-
     residuals_df = arx["residuals_df"]
     res_cols = [c for c in residuals_df.columns if c != "time"]
-
+    #SVD procedure on the rolling window
     fit = roll_svd(
         data=residuals_df,
         time="time",
@@ -195,6 +199,5 @@ def build_signal_arimax_svd(
         values_only=True,
         seed=seed,
     )
-
     s1 = [(np.nan if (d is None or len(d) < 1) else float(d[0])) for d in fit["D"]]
     return pd.DataFrame({"time_ind": fit["windows"]["t_rep"].to_numpy(), "signal": np.asarray(s1, dtype=float)})

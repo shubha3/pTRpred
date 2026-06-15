@@ -14,7 +14,9 @@ def _cov_window(
     na_action: Literal["omit_rows", "impute_mean", "pairwise_complete"],
     cov_on_pairwise: bool,
 ) -> np.ndarray:
-    """Compute covariance for a single window."""
+    """
+    Compute covariance for a single window
+    """
     if na_action == "pairwise_complete" and cov_on_pairwise:
         S = Xc.cov(min_periods=2)  # pairwise complete
         return S.to_numpy()
@@ -53,17 +55,14 @@ def roll_svd(
         raise ValueError("`time` must be a column in `data`.")
     if seed is not None:
         np.random.seed(int(seed))
-
     windows = roll_windows(data[time].to_numpy(), window, step, align, type)
     X_all = extract_X(data, x_cols)
     colnames = list(X_all.columns)
     p = int(X_all.shape[1])
-
     nW = int(windows.shape[0])
     D_list: List[Optional[np.ndarray]] = [None] * nW
     V_list: Optional[List[Optional[np.ndarray]]] = None if values_only else [None] * nW
     U_list: Optional[List[Optional[np.ndarray]]] = None if values_only else [None] * nW
-
     have_scipy = False
     if fast:
         try:
@@ -71,12 +70,10 @@ def roll_svd(
             have_scipy = True
         except Exception:
             have_scipy = False
-
     for w in range(nW):
         idx_1b = windows.iloc[w]["idx"]  # list of 1-based indices
         idx_0b = [int(i) - 1 for i in idx_1b]
         Xw = X_all.iloc[idx_0b, :].copy()
-
         # NA handling (per window)
         if na_action == "omit_rows":
             Xw = Xw.dropna(axis=0, how="any")
@@ -92,40 +89,31 @@ def roll_svd(
             pass
         else:
             raise ValueError("`na_action` must be one of {'omit_rows','impute_mean','pairwise_complete'}")
-
         n_w = int(Xw.shape[0])
         if n_w < 2:
             continue
-
         # Center/scale per window
         if center:
             mu = Xw.mean(axis=0, skipna=True)
         else:
             mu = pd.Series(np.zeros(p), index=Xw.columns)
-
         if scale_:
             sc = Xw.std(axis=0, ddof=1, skipna=True).replace(0, np.nan)
         else:
             sc = pd.Series(np.ones(p), index=Xw.columns)
-
         sc = sc.fillna(1.0)
         Xc = (Xw - mu) / sc
-
         kk = min(int(k) if k is not None else min(n_w, p), n_w, p)
-
         S = _cov_window(Xc, na_action, cov_on_pairwise)
         if not np.isfinite(S).all():
             continue
-
         if values_only:
             vals = np.linalg.eigvalsh(S)[::-1]
             D_list[w] = vals[:kk].copy()
             continue
-
         # Full results
         if have_scipy and kk < p:
             from scipy.sparse.linalg import eigsh  # type: ignore
-
             vals, vecs = eigsh(S, k=kk, which="LA")
             order = np.argsort(-vals)
             vals = vals[order]
@@ -135,13 +123,11 @@ def roll_svd(
             order = np.argsort(-vals_full)
             vals = vals_full[order][:kk]
             vecs = vecs_full[:, order][:, :kk]
-
         D_list[w] = np.asarray(vals, dtype=float).copy()
         if V_list is not None:
             V_list[w] = np.asarray(vecs, dtype=float).copy()
         if U_list is not None:
             U_list[w] = Xc.to_numpy(dtype=float) @ np.asarray(vecs, dtype=float)
-
     return {
         "windows": windows,
         "D": D_list,
